@@ -1,0 +1,244 @@
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  color: black;
+  overflow-x: hidden;
+  position: relative;
+  height: 100vh;  
+  background: url('IMAGES/india.jpg') no-repeat center center fixed; 
+  background-size: cover; 
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  
+}
+
+.navbar .menu {
+  display: flex;
+  gap: 20px; 
+}
+
+.navbar .menu a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar .menu a:hover {
+  color: #ffdd57; 
+}
+
+.navbar .sign-up {
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: black;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.navbar .sign-up:hover {
+  background-color: black; 
+}
+.navbar .menu a {
+  margin-right: 20px;  
+}
+
+.navbar .sign-up {
+  margin-left: 20px; 
+}
+
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+  color: white; 
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.hero h1 {
+  color: black; 
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero p {
+  color: black; 
+  font-size: 1.2rem;
+}
+
+.hero .btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: black;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.hero .btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.05);
+}
+
+/* Destination Section */
+.tours {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 60px 20px;
+}
+
+.destination {
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  color: white; 
+  max-width: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.destination::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);  
+  backdrop-filter: blur(10px); 
+  border-radius: 12px;  
+  z-index: -1;  
+}
+
+.destination:hover {
+  transform: translateY(-10px);
+}
+
+.destination-img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.destination h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.destination p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+/* Discount Section */
+.discount {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5); 
+  backdrop-filter: blur(10px); 
+  padding: 50px 20px;
+  color: white; 
+  font-size: 1.2rem;
+  border-radius: 10px;
+  margin: 40px auto;
+  width: 80%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.discount h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.discount p {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.discount .btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: black;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.discount .btn:hover {
+  background: black;
+  transform: scale(1.05);
+}
+
+
+/* Footer */
+.footer {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  color: black;
+}
+
+.footer nav a {
+  color: black;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: 0.3s;
+}
+
+.footer nav a:hover {
+  color: #ffdd57;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      text-align: center;
+  }
+  .menu ul {
+      flex-direction: column;
+      gap: 10px;
+  }
+  .tours {
+      flex-direction: column;
+      align-items: center;
+  }
+  .destination {
+      max-width: 80%;
+  }
+}
